@@ -109,3 +109,49 @@ closeBtn.addEventListener('click',function() {
 function toggleLightbox() {
     lightbox.classList.toggle('open')
 }
+
+
+// Aside Navbar
+
+const nav = document.querySelector('.nav');
+const navList = nav.querySelectorAll('li');
+
+navList.forEach((item) => {
+    item.addEventListener('click', function() {
+        for( let i = 0; i < navList.length; i++) {
+            navList[i].querySelector("a").classList.remove('active');
+           
+        }
+        item.querySelector("a").classList.add('active');
+        if(window.innerWidth < 1200) {
+            asideSectionToggleBtn();
+        }
+        
+    })
+
+})
+
+
+
+
+
+// Toggler Button 
+const navTogglerBtn = document.querySelector('.nav-toggler');
+const aside = document.querySelector('.aside');
+const allSection = document.querySelectorAll('.section');
+const totalSection = allSection.length;
+
+navTogglerBtn.addEventListener("click", ()=> {
+    asideSectionToggleBtn()
+});
+
+function asideSectionToggleBtn() {
+    aside.classList.toggle("open");
+    navTogglerBtn.classList.toggle("open");
+    for(let i=0; i<totalSection;i++) {
+        allSection[i].classList.toggle('open');
+    }
+}
+
+    
+

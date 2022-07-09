@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/pink.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <title>Document</title>
+    <title>Portfolio Theme</title>
+
+    <!-- Live Style Switcher  -->
+    <link rel="stylesheet" class="alternate-style" title="blue" href="./assets/css/blue.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="green" href="./assets/css/green.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="orange" href="./assets/css/orange.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="yellow" href="./assets/css/yellow.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="pink" href="./assets/css/pink.css" disabled>
+    <link rel="stylesheet" href="./assets/css/themeSwicher.css">
+
+
+    <!-- End Live Style Switcher  -->
+
 </head>
 <body>
     <!--Main container-->
@@ -24,16 +36,16 @@
             </div>
             <!--Nav-->
             <ul class="nav">
-                <li><a href="#" class="active"><i class="fa fa-home"></i>Home</a></li>
-                <li><a href="#"><i class="fa fa-user"></i>About</a></li>
-                <li><a href="#"><i class="fa fa-list"></i>Service</a></li>
-                <li><a href="#"><i class="fa fa-briefcase"></i>Portfolio</a></li>
-                <li><a href="#"><i class="fa fa-envelope"></i>Blog</a></li>
-                <li><a href="#"><i class="fa fa-comments"></i>Contact</a></li>
+                <li><a href="#home" class="active"><i class="fa fa-home"></i>Home</a></li>
+                <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
+                <li><a href="#service"><i class="fa fa-list"></i>Service</a></li>
+                <li><a href="#portfolio"><i class="fa fa-briefcase"></i>Portfolio</a></li>
+                <li><a href="#blog"><i class="fa fa-envelope"></i>Blog</a></li>
+                <li><a href="#contact"><i class="fa fa-comments"></i>Contact</a></li>
             </ul>
 
             <div class="copyright-text">
-                &copy; Copy right text
+                &copy; Copy right by Mi Tran
             </div>
         </div>
         <!--End Aside-->
@@ -42,12 +54,12 @@
         <div class="main-content">
 
             <!--Home-->
-            <section class="home section">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="intro">
                         <img src="./assets/img/Mitran.png" alt="profile" class="shadow-dark ">
                         <h1>Mi Tran</h1>
-                        <p>Entreprenuership P.h.D Candidate</p>
+                        <p>Entrepreneurship P.h.D Candidate</p>
                         <div class="social-links">
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
@@ -62,7 +74,7 @@
             <!--End Home-->
 
             <!--About section-->
-            <section class="about section">
+            <section class="about section" id="about">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-15">
@@ -261,7 +273,7 @@
             <!--End About section-->
 
             <!-- Service Section -->
-            <section class="service section">
+            <section class="service section" id="service">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-15">
@@ -332,7 +344,7 @@
             <!-- End Service Section -->
 
             <!-- Portfolio Section -->
-            <section class="portfolio section">
+            <section class="portfolio section" id="portfolio">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-15">
@@ -445,7 +457,7 @@
             <!-- End Portfolio Section -->
 
             <!-- Blog Section -->
-            <section class="blog section">
+            <section class="blog section" id="blog">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-15">
@@ -510,7 +522,7 @@
             <!-- End Blog Section -->
 
              <!-- Contact Section -->
-             <section class="contact section">
+             <section class="contact section" id="contact">
                 <div class="container">
                     <div class="row">
                         <div class="section-title padding-15">
@@ -615,7 +627,36 @@
     <!-- End Modal Light box -->
 
 
+    <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <div class="toggle-theme-swicher">
+                <i class="fa fa-cog"></i>
+            </div>
+            <h4>Change Color Theme</h4>
+            <ul>
+                <li><a href="javascript:void(0);" title="pink" style="background-color: #ec1839" onclick="setActiveStyle('pink')"></a></li>
+                <li><a href="javascript:void(0);" title="blue" style="background-color: #2196f3" onclick="setActiveStyle('blue')"></a></li>
+                <li><a href="javascript:void(0);" title="green" style="background-color: #72b626" onclick="setActiveStyle('green')"></a></li>
+                <li><a href="javascript:void(0);" title="orange" style="background-color: #fa5b0f" onclick="setActiveStyle('orange')"></a></li>
+                <li><a href="javascript:void(0);" title="yellow" style="background-color: #ffb400" onclick="setActiveStyle('yellow')"></a></li>
+            </ul>
+
+            <h4>Change Body Theme</h4>
+            <label>
+                <input type="radio" class="body-skin" name="body-style" value="light" checked="true">
+                Light
+            </label>
+            <label>
+                <input type="radio" class="body-skin" name="body-style" value="dark">
+                Dark
+            </label>
+        </div>
+    <!-- End Theme Switcher -->
+
     <!-- JavaScript -->
     <script src="./assets/js/main.js"></script>
+    <!-- Theme Switcher JS -->
+    <script src="./assets/js/themeSwicher.js"></script>
+
 </body>
 </html>
